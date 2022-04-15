@@ -7,9 +7,8 @@
  */
 
 package aertsh;
-import edu.msoe.cs1021.ImageUtil;
-import javafx.application.Application;
 
+import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,6 +16,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
@@ -64,7 +64,6 @@ public class ImageIO extends Application {
         String name = path.toString();
         Image image;
         image = switch (name.substring(name.indexOf('.') + 1)) {
-            case "png", "jpg" -> ImageUtil.readImage(path);
             case "msoe" -> ImageIO.readMSOE(path);
             case "bmsoe" -> ImageIO.readBMSOE(path);
             default -> null;
@@ -84,7 +83,6 @@ public class ImageIO extends Application {
     public static void write(Image image, Path path) throws IOException {
         String name = path.toString();
         switch (name.substring(name.indexOf('.') + 1)) {
-            case "png", "jpg" -> ImageUtil.writeImage(path, image);
             case "msoe" -> ImageIO.writeMSOE(image, path);
             case "bmsoe" -> ImageIO.writeBMSOE(image, path);
         }

@@ -43,10 +43,5 @@
             <Insets bottom="10.0" left="20.0" top="10.0" />
          </VBox.margin>
       </Button>
-      <ToggleButton fx:id="showFilter" mnemonicParsing="false" onAction="#showFilter" text="Show Filter" >
-         <VBox.margin>
-            <Insets bottom="10.0" left="20.0" top="10.0" />
-         </VBox.margin>
-      </ToggleButton>
    </VBox>
 </AnchorPane>

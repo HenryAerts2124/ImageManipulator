@@ -31,13 +31,11 @@ import java.nio.file.Paths;
 /**
  * Controller class for GUI elements, handles loading, saving and image manipulation.
  */
-public class Lab8Controller {
+public class  Lab8Controller {
     private static final double RED_MULTI = 0.2126;
     private static final double GREEN_MULTI = 0.7152;
     private static final double BLUE_MULTI = 0.0722;
 
-    @FXML
-    ToggleButton showFilter;
 
     @FXML
     Button redGray;
@@ -76,7 +74,7 @@ public class Lab8Controller {
         fileChooser.setTitle("Open Image File");
         fileChooser.setInitialDirectory(Paths.get("./images").toFile());
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.msoe",
+                new FileChooser.ExtensionFilter("Image Files", "*.msoe",
                         "*.bmsoe"));
         File selectedFile = fileChooser.showOpenDialog(stage);
         if (selectedFile != null) {
@@ -110,7 +108,7 @@ public class Lab8Controller {
         fileChooser.setTitle("Save Image File");
         fileChooser.setInitialDirectory(Paths.get("./images").toFile());
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.msoe",
+                new FileChooser.ExtensionFilter("Image Files", "*.msoe",
                         "*.bmsoe"));
         File selectedFile = fileChooser.showSaveDialog(stage);
         if (selectedFile != null) {
@@ -237,28 +235,6 @@ public class Lab8Controller {
 
     }
 
-    /**
-     * Method to open/close filter editor window
-     * @throws IOException if the fxml file cannot be loaded, the scene cannot be loaded,
-     * or some other file error
-     */
-    public void showFilter() throws IOException {
-        Stage secondStage = new Stage();
-        if(showFilter.isSelected()) {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("kernel.fxml"));
-            Parent root = loader.load();
-            secondStage.setScene(new Scene(root));
-            secondStage.setTitle("Filter Window");
-            KernelController controller = loader.getController();
-            controller.setImageView(imageView);
-            secondStage.show();
-            showFilter.setText("Hide Filter");
-        } else{
-            showFilter.setText("Show Filter");
-            secondStage.close();
-        }
-    }
 
     /**
      * Functional interface used to streamline transformation of images

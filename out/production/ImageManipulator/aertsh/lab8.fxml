@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aertsh.Lab8Controller">
+   <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="349.0" layoutX="14.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+   <VBox layoutX="367.0" layoutY="-1.0" prefHeight="394.0" prefWidth="225.0">
+      <Button fx:id="open" mnemonicParsing="false" onAction="#open" text="Open">
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="save" mnemonicParsing="false" onAction="#save" text="Save">
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="reload" mnemonicParsing="false" onAction="#reload" text="Reload">
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="grayScale" mnemonicParsing="false" onAction="#grayScale" text="Grayscale">
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="negative" mnemonicParsing="false" onAction="#negative" text="Negative">
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="red" mnemonicParsing="false" onAction="#red" text="Red">
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="redGray" mnemonicParsing="false" onAction="#redGray" text="Red/Gray">
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+   </VBox>
+</AnchorPane>
